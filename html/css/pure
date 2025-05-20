@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Crafting Clean Code & Elegant Interfaces">
+  <title>jaind</title>
+  <style>
+    :root {
+      --beige: #f5f5dc;
+      --peach: #ffe5b4;
+      --pink: #ffc0cb;
+      --orange: #ff8c42;
+      --purple: #9b59b6;
+      --text-dark: #333;
+      --text-light: #fff;
+    }
+
+    body {
+      background-color: var(--beige);
+      color: var(--text-dark);
+      line-height: 1.6;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    body.dark-mode {
+      background-color: #1e1e2f;
+      color: var(--text-light);
+    }
+
+    header {
+      background: var(--peach);
+      padding: 2rem;
+      text-align: center;
+    }
+
+    body.dark-mode header {
+      background: var(--purple);
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      color: var(--orange);
+    }
+
+    header p {
+      font-size: 1.2rem;
+      margin-top: 0.5rem;
+    }
+
+    section {
+      padding: 2rem;
+      max-width: 960px;
+      margin: auto;
+    }
+
+    section h2 {
+      color: var(--orange);
+      margin-bottom: 1rem;
+      font-size: 1.8rem;
+    }
+
+    .services li {
+      margin-bottom: 1.5rem;
+      list-style: none;
+      padding-left: 1rem;
+      border-left: 4px solid var(--orange);
+    }
+
+    .contact a {
+      display: inline-block;
+      margin-right: 1rem;
+      color: var(--purple);
+      text-decoration: none;
+    }
+
+    footer {
+      background: var(--pink);
+      color: var(--text-dark);
+      text-align: center;
+      padding: 1rem;
+      margin-top: 2rem;
+    }
+
+    body.dark-mode footer {
+      background: #2c2c40;
+      color: var(--text-light);
+    }
+
+    .toggle-btn {
+      position: fixed;
+      top: 1rem;
+      right: 1rem;
+      background-color: var(--purple);
+      color: white;
+      border: none;
+      padding: 0.5rem 1rem;
+      border-radius: 20px;
+      cursor: pointer;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 1.8rem;
+      }
+      section h2 {
+        font-size: 1.4rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <button class="toggle-btn" onclick="toggleDarkMode()">Toggle Dark Mode</button>
+  <header>
+    <h1>jaind.ai</h1>
+    <p>Crafting Clean Code & Elegant Interfaces</p>
+  </header>
+
+  <section class="about">
+    <h2>About Me</h2>
+    <p>At <strong>jaind</strong>, I specialize in building fast, elegant, and accessible web experiences — without relying on bulky plugins or frameworks. Every line of code is handcrafted to reflect performance, responsiveness, and design precision. Whether you're a solo founder, startup, or small business, I help you stand out with a refined web presence.</p>
+  </section>
+
+  <section class="services">
+    <h2>What I Do</h2>
+    <ul>
+      <li><strong>Responsive & SEO-Friendly Websites:</strong> I develop high-performance websites using pure HTML and CSS — optimized for all devices and search engines.</li>
+      <li><strong>Lightweight Data Solutions:</strong> I create simple, efficient database systems tailored for small businesses and stakeholders — fast, minimal, and functional.</li>
+      <li><strong>UI/UX-Focused Web Interfaces:</strong> I design clean, user-centric applications that prioritize both visual appeal and usability.</li>
+    </ul>
+  </section>
+
+  <section class="contact">
+    <h2>Let’s Connect</h2>
+    <p>
+      <a href="#">https://linkedIn.com/in/jane-emmanuel-</a>
+      <a href="#">GitHub</a>
+    </p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Jane Emmanuel — All rights reserved.</p>
+  </footer>
+
+  <script>
+    function toggleDarkMode() {
+      document.body.classList.toggle('dark-mode');
+    }
+  </script>
+</body>
+</html>
